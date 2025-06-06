@@ -6,6 +6,7 @@ from typing import List
 import json
 import logging
 from datetime import datetime
+import os
 
 from models import BulkMessageRequest, SingleMessageRequest, MessageResponse, ContactInfo
 from whatsapp_service import WhatsAppService
@@ -15,11 +16,18 @@ from config import ServerConfig
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Inicializar FastAPI
+# Obter path prefix da variável de ambiente
+ROOT_PATH = os.getenv("ROOT_PATH", "").rstrip("/")
+
+# Inicializar FastAPI com root_path para subdiretórios
 app = FastAPI(
     title="WhatsApp Message Manager",
     description="Sistema de gerenciamento de mensagens WhatsApp usando Evolution API",
-    version="1.0.0"
+    version="1.0.0",
+    root_path=ROOT_PATH,  # Suporte para subdiretórios
+    docs_url="/docs" if not ROOT_PATH else f"{ROOT_PATH}/docs",
+    redoc_url="/redoc" if not ROOT_PATH else f"{ROOT_PATH}/redoc",
+    openapi_url="/openapi.json" if not ROOT_PATH else f"{ROOT_PATH}/openapi.json"
 )
 
 # Configurar templates e arquivos estáticos
@@ -32,7 +40,13 @@ whatsapp_service = WhatsAppService()
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
     """Página inicial do frontend"""
-    return templates.TemplateResponse("index.html", {"request": request})
+    # Passar informações do path para o template
+    context = {
+        "request": request,
+        "root_path": ROOT_PATH,
+        "api_base_url": f"{ROOT_PATH}/api" if ROOT_PATH else "/api"
+    }
+    return templates.TemplateResponse("index.html", context)
 
 @app.post("/api/send-message", response_model=MessageResponse)
 async def send_single_message(message_data: SingleMessageRequest):

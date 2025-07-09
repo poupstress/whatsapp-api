@@ -30,8 +30,8 @@ Abra o arquivo `.env` e altere:
 ```bash
 # SUAS CONFIGURAÇÕES DA EVOLUTION API
 EVOLUTION_SERVER_URL=evolution.rdragentes.com.br
-EVOLUTION_INSTANCE_ID=rodolfo
-EVOLUTION_API_KEY=75363EE38AA4-438F-84AB-B870ACF55495
+EVOLUTION_INSTANCE_ID=poupstress
+EVOLUTION_API_KEY=0A2DB22449B7-4B21-9D31-CFDC55CA63E4
 
 # SEU DOMÍNIO
 DOMAIN=whatsapp-api.seudominio.com
@@ -56,8 +56,8 @@ SECRET_KEY=sua-chave-super-secreta-aqui
 2. **Variáveis de Ambiente no EasyPanel:**
    ```bash
    EVOLUTION_SERVER_URL=evolution.rdragentes.com.br
-   EVOLUTION_INSTANCE_ID=rodolfo
-   EVOLUTION_API_KEY=75363EE38AA4-438F-84AB-B870ACF55495
+   EVOLUTION_INSTANCE_ID=poupstress
+   EVOLUTION_API_KEY=0A2DB22449B7-4B21-9D31-CFDC55CA63E4
    DEBUG=false
    HOST=0.0.0.0
    PORT=8000
@@ -75,8 +75,8 @@ SECRET_KEY=sua-chave-super-secreta-aqui
 2. **Variáveis de Ambiente:**
    ```bash
    EVOLUTION_SERVER_URL=evolution.rdragentes.com.br
-   EVOLUTION_INSTANCE_ID=rodolfo
-   EVOLUTION_API_KEY=75363EE38AA4-438F-84AB-B870ACF55495
+   EVOLUTION_INSTANCE_ID=poupstress
+   EVOLUTION_API_KEY=0A2DB22449B7-4B21-9D31-CFDC55CA63E4
    DEBUG=false
    WORKERS=2
    ```

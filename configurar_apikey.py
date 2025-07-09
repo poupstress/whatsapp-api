@@ -64,14 +64,14 @@ def main():
     
     # API Keys para testar (você pode adicionar mais)
     api_keys_to_test = [
-        "62D811330286-4F48-B836-8FE1955A8A1F",  # Atual
+        "0A2DB22449B7-4B21-9D31-CFDC55CA63E4",  # Atual
         # Adicione outras API keys aqui se tiver
     ]
     
     server_url = "https://evolution.rdragentes.com.br"
     
     print(f"🌐 Servidor: {server_url}")
-    print(f"📱 Instância: PoupStress")
+    print(f"📱 Instância: poupstress")
     print("-" * 60)
     
     valid_keys = []

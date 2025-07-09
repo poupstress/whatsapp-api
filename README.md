@@ -40,8 +40,8 @@ As configurações da Evolution API já estão definidas no arquivo `config.py`:
 ```python
 # Configurações da Evolution API v2
 SERVER_URL = "evolution.rdragentes.com.br"
-INSTANCE_ID = "PoupStress"
-API_KEY = "62D811330286-4F48-B836-8FE1955A8A1F"
+INSTANCE_ID = "poupstress"
+API_KEY = "0A2DB22449B7-4B21-9D31-CFDC55CA63E4"
 ```
 
 ### 4. Execute o servidor
@@ -193,8 +193,8 @@ Sua conta foi atualizada com sucesso.
 ```python
 class EvolutionAPIConfig:
     SERVER_URL = "evolution.rdragentes.com.br"
-    INSTANCE_ID = "PoupStress" 
-    API_KEY = "62D811330286-4F48-B836-8FE1955A8A1F"
+    INSTANCE_ID = "poupstress" 
+    API_KEY = "0A2DB22449B7-4B21-9D31-CFDC55CA63E4"
 
 class ServerConfig:
     HOST = "0.0.0.0"
